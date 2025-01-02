@@ -19,8 +19,8 @@ const ChangeView = ({ onLayoutChange ,OnPaneLayOutChange ,EditorPaneLayOutChange
       <button
         onClick={() => setShow((prevopen) => !prevopen)}
         className="mainButtonLayout bg-gray-800/40 px-3 py-2 rounded-md"
-      >
-        <i className={`${selectedIcon} text-md`}></i>
+      > Mode 
+        <i className={`${selectedIcon} text-md ml-2`}></i>
       </button>
 
       <div

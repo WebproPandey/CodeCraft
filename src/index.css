@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.MainHeading{
+  background: linear-gradient( to bottom , rgba(255 ,255, 255 ) 20% , rgba(0 ,0 , 0 ) 80%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 
 .editor-container{
   flex-grow: 1;

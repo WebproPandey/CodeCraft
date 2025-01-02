@@ -4,8 +4,10 @@ import UseLocalStorage from "../hooks/UseLocalStorage";
 import TitleEditor from "./TitleEidtor";
 import ChangeView from "./ChangeView";
 
+
 const HomePage = () => {
 
+ 
     const [html, setHtml] = UseLocalStorage("html", "");
     const [css, setCss] = UseLocalStorage("css", "");
     const [js, setJs] = UseLocalStorage("js", "");
@@ -52,17 +54,7 @@ const HomePage = () => {
           onLayoutChange={onLayoutChange}
           OnPaneLayOutChange={OnPaneLayOutChange}
         />
-        <div className="auth flex  justify-center items-center  gap-2">
-          <button className="bg-gray-800/40 px-5 py-2 rounded-md">
-           <i className="ri-save-fill "></i>
-         </button>
-          <button className="bg-gray-800/40 px-5 py-2 rounded-md">
-            LogIn
-          </button>
-          <button className="bg-gray-800/40 px-5 py-2 rounded-md">
-            SignUp
-          </button>
-        </div>
+      
       </div>
     </div>
 
@@ -114,7 +106,7 @@ const HomePage = () => {
         />
       </div>
     </div>
-  </div>
+    </div>
   )
 }
 
