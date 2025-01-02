@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
-const ChangeView = ({ onLayoutChange }) => {
+const ChangeView = ({ onLayoutChange ,OnPaneLayOutChange ,EditorPaneLayOutChange }) => {
   const [show, setShow] = useState(false);
   const [selectedIcon, setSelectedIcon] = useState("ri-layout-top-fill");
 
-  const handleIconChange = (iconClass, layoutClass) => {
+  const handleChange = (iconClass, layoutClass ,PanelayoutClass , EditorLayOutClass) => {
     setSelectedIcon(iconClass);
     onLayoutChange(layoutClass); 
+    OnPaneLayOutChange(PanelayoutClass);
+    EditorPaneLayOutChange(EditorLayOutClass)
     setShow(false);
-  };
+  }
+ 
 
 
   return (
@@ -25,7 +28,8 @@ const ChangeView = ({ onLayoutChange }) => {
         <h2 className="pb-1 text-md">Change View</h2>
         <div className="mode border flex justify-between items-center">
           <button  
-             onClick={() => handleIconChange("ri-layout-left-fill", "flex-row")}
+             onClick={() => handleChange("ri-layout-left-fill", "flex-row" ,"h-[90vh] w-[40%] flex-col  " ," min-h-[28vh]  w-full" )}
+
              className={`px-3 py-2 rounded-md ${
               selectedIcon === "ri-layout-left-fill"
                 ? "bg-gray-400/50"
@@ -35,7 +39,7 @@ const ChangeView = ({ onLayoutChange }) => {
             <i className="ri-layout-left-fill text-md"></i>
           </button>
 
-          <button  onClick={() => handleIconChange("ri-layout-top-fill" , "flex-col")}
+          <button  onClick={() => handleChange("ri-layout-top-fill" , "flex-col")}
             className={`px-3 py-2 rounded-md ${
               selectedIcon === "ri-layout-top-fill"
                 ? "bg-gray-400/50"
@@ -45,7 +49,7 @@ const ChangeView = ({ onLayoutChange }) => {
             <i className="ri-layout-top-fill text-md"></i>
           </button>
 
-          <button  onClick={() => handleIconChange("ri-layout-right-fill" , "flex-row-reverse")}
+          <button  onClick={() => handleChange("ri-layout-right-fill" , "flex-row-reverse" ,"h-[90vh] w-[60%] flex-col  "  ," min-h-[28vh]  w-full" )}
             className={`px-3 py-2 rounded-md ${
               selectedIcon === "ri-layout-right-fill"
                 ? "bg-gray-400/50"

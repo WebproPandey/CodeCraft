@@ -4,12 +4,16 @@
 
 
 .editor-container{
+  flex-grow: 1;
   flex-basis:0;
 }
-
+.Pane{
+  min-height: 50% ;
+}
 
 .editor-container.collapsed{
   flex-grow: 0;
+  flex-basis: auto;
   position: relative;
 }
 
@@ -19,3 +23,22 @@
 .CodeMirror-scroll::-webkit-scrollbar{
   display: none;
 }
+
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+  background: #555; 
+  border-radius: 4px; 
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+  background: #222; 
+  border-radius: 4px; 
+}
+

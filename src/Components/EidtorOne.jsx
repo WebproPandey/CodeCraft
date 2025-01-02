@@ -7,7 +7,7 @@ import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 
 const EditorOne = (props) => {
-  const { displayName, language, value, onChange ,logo } = props;
+  const { displayName, language, value, onChange ,logo ,layout } = props;
 
   function handleChange(editor, data, value) {
     if (onChange) {
@@ -15,10 +15,10 @@ const EditorOne = (props) => {
     }
   }
 
-  const [open, setopen] = useState(true);
-
+  const [open, setopen] = useState(true)
+ 
   return (
-    <div className={`editor-container ${open ? "" : "collapsed"} flex-grow flex flex-col p-[.5rem]   `}>
+    <div  className={`editor-container ${open ? "" : "collapsed"} ${layout}  flex flex-col p-[.5rem] pt-[0rem] `}>
       <div className="editor-title flex gap-4 justify-between bg-[#232324] rounded-tr-lg rounded-tl-lg text-white text-xl px-4">
         <div>
           {logo}
